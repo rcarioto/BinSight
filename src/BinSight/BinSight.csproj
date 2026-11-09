@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Console subsystem: cmd/PowerShell wait for CLI and restore the prompt under output.
+         GUI mode detaches (see Program / NativeConsole) so a console box is not left open. -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>BinSight</AssemblyName>
+    <RootNamespace>BinSight</RootNamespace>
+    <RollForward>LatestMajor</RollForward>
+    <Authors>Ray Carioto</Authors>
+    <Company>Ray Carioto</Company>
+    <Copyright>Copyright (C) 2026 Ray Carioto &lt;raymond.carioto@gmail.com&gt;</Copyright>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <Product>BinSight</Product>
+    <Description>BinSight - PE security scanner with GUI and CLI (BinScope 2014 replacement for Win10/Win11). Author: Ray Carioto &lt;raymond.carioto@gmail.com&gt;.</Description>
+    <Version>1.3.0</Version>
+    <StartupObject>BinSight.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BinSight.Core\BinSight.Core.csproj" />
+  </ItemGroup>
+
+</Project>

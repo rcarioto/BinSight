@@ -1,0 +1,27 @@
+{
+  "rules": [
+    {
+      "id": "ban-virtualprotect-ex",
+      "match": "import",
+      "dll": "KERNEL32.dll",
+      "function": "VirtualProtectEx",
+      "expect": "absent",
+      "severity": "fail",
+      "message": "VirtualProtectEx is banned by org policy for this product line."
+    },
+    {
+      "id": "ban-shared-section-name",
+      "match": "section",
+      "name": ".shared",
+      "expect": "absent",
+      "severity": "warn"
+    },
+    {
+      "id": "no-plaintext-password-marker",
+      "match": "string",
+      "pattern": "password=",
+      "expect": "absent",
+      "severity": "fail"
+    }
+  ]
+}
